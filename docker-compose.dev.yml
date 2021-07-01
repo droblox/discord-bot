@@ -1,0 +1,14 @@
+services:
+  app.dev:
+    restart: always
+    environment:
+      NODE_ENV: development
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile.app.dev
+    volumes:
+      - .:/app
+      - dev-node_modules:/app/node_modules
+
+volumes:
+  dev-node_modules:

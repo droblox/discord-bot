@@ -1,0 +1,14 @@
+{
+  "name": "Droblox Discord Bot",
+  "dockerComposeFile": ["docker-compose.dev.yml"],
+  "service": "app.dev",
+  "shutdownAction": "none",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "sburg.vscode-javascript-booster",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "redhat.vscode-yaml"
+  ]
+}

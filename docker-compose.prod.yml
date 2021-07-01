@@ -1,0 +1,9 @@
+services:
+  app.dev:
+    restart: always
+    environment:
+      BOT: droblox
+      NODE_ENV: production
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile.app.prod

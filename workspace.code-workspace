@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "ms-azuretools.vscode-docker",
+      "ms-vscode-remote.remote-containers",
+      "redhat.vscode-yaml",
+      "editorconfig.editorconfig",
+      "dbaeumer.vscode-eslint",
+      "sburg.vscode-javascript-booster"
+    ]
+  },
+  "settings": {
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "debug.javascript.unmapMissingSources": true,
+    "css.lint.unknownAtRules": "ignore",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "typescript.suggestionActions.enabled": true,
+    "typescript.autoClosingTags": false,
+    "editor.formatOnSave": true,
+    // Disable default formatting (ESLint formatting will be used instead)
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": false
+    },
+    "[typescript]": {
+      "editor.formatOnSave": false
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": false
+    },
+    // Auto-fix issues with ESLint when you save code changes
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.workingDirectories": ["."],
+    "redhat.telemetry.enabled": false
+  }
+}
