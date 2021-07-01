@@ -13,28 +13,28 @@
     "start": "nodemon build/server.js"
   },
   "dependencies": {
-    "discord.js": "https://github.com/vaporox/discord.js#fix-await-interaction",
+    "discord.js": "^13.0.0-dev.a08ce7d.1625097834",
     "emoji-regex": "^9.2.2"
   },
   "devDependencies": {
     "@types/emoji-regex": "^9.2.0",
-    "@types/node": "^15.12.2",
-    "@typescript-eslint/eslint-plugin": "^4.26.1",
-    "@typescript-eslint/parser": "^4.26.1",
-    "commander": "^7.2.0",
-    "eslint": "^7.28.0",
+    "@types/node": "^15.12.5",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "commander": "^8.0.0",
+    "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-sonarjs": "^0.7.0",
-    "eslint-plugin-unicorn": "^33.0.1",
+    "eslint-plugin-unicorn": "^34.0.1",
     "eslint-plugin-unused-imports": "^1.1.1",
-    "nodemon": "^2.0.7",
-    "npm-check-updates": "^11.6.0",
-    "prettier": "^2.3.1",
-    "tslib": "^2.2.0",
-    "typescript": "^4.3.2"
+    "nodemon": "^2.0.9",
+    "npm-check-updates": "^11.7.1",
+    "prettier": "^2.3.2",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
   }
 }
