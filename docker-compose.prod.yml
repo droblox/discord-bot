@@ -2,6 +2,7 @@ services:
   app.dev:
     env_file:
       - .env
+    user: "node:node"
     restart: always
     environment:
       BOT: droblox

@@ -1,28 +1,40 @@
 FROM node:16-alpine AS dev
 
-WORKDIR /app
+USER root
+WORKDIR /root
 
-COPY docker/app/bashrc /root/.bashrc
-COPY docker/app/starship.toml /root/.config/
 RUN apk update && \
     apk upgrade && \
-    apk add --no-cache ca-certificates openssh-client git vim bash && \
-    git config --global color.ui true && \
-    git config --global core.pager more && \
-    git config --global pull.rebase true && \
-    git config --global fetch.prune true && \
-    git config --global diff.colorMoved zebra && \
     apk add --no-cache --virtual .install-deps curl && \
+    apk add --no-cache ca-certificates openssh-client git vim bash && \
     sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes && \
     sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd  && \
+    sed -i -e "s/bin\/sh/bin\/bash/" /etc/passwd  && \
     apk del .install-deps && \
     rm -rf /var/cache/*/*
 
-COPY package*.json yarn.lock ./
-RUN yarn install
+RUN install -d -m 0755 -o node -g node /home/node/app/.next && \
+    install -d -m 0755 -o node -g node /home/node/app/node_modules
+
+USER node
+WORKDIR /home/node
+
+RUN git config --global color.ui true && \
+    git config --global core.pager more && \
+    git config --global pull.rebase true && \
+    git config --global fetch.prune true && \
+    git config --global diff.colorMoved zebra
+COPY --chown=node:node docker/app/bashrc .bashrc
+COPY --chown=node:node docker/app/starship.toml .config/
+
+USER node
+WORKDIR /home/node/app
+
+COPY --chown=node:node package*.json ./
+RUN npm install
 
 ENV NODE_ENV development
 ENV EDITOR /usr/bin/vim
 ENV LC_ALL en_US.UTF-8
 
-CMD ["yarn" , "dev"]
+CMD ["npm", "run" , "dev"]

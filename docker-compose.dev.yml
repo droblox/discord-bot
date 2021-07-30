@@ -2,6 +2,7 @@ services:
   app.dev:
     env_file:
       - .env
+    user: "node:node"
     restart: always
     environment:
       NODE_ENV: development
@@ -9,7 +10,7 @@ services:
       context: .
       dockerfile: docker/app/Dockerfile.app.dev
     volumes:
-      - .:/app
+      - .:/home/node/app
       - dev-node_modules:/app/node_modules
 
 volumes:
