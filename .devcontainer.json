@@ -3,7 +3,7 @@
   "dockerComposeFile": ["docker-compose.dev.yml"],
   "service": "app.dev",
   "shutdownAction": "none",
-  "workspaceFolder": "/app",
+  "workspaceFolder": "/home/node/app",
   "extensions": [
     "sburg.vscode-javascript-booster",
     "esbenp.prettier-vscode",
