@@ -9,4 +9,4 @@ services:
       NODE_ENV: production
     build:
       context: .
-      dockerfile: docker/app/Dockerfile.app.prod
+      dockerfile: docker/app/Dockerfile.prod
