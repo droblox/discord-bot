@@ -31,8 +31,8 @@ COPY --chown=node:node docker/app/starship.toml .config/
 USER node
 WORKDIR /home/node/app
 
-COPY --chown=node:node package* .npmrc ./
-RUN npm install
+COPY --chown=node:node package* .npmrc /home/node/app/
+RUN npm install --no-audit --prefer-offline
 
 ENV NODE_ENV development
 ENV EDITOR /usr/bin/vim

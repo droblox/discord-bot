@@ -8,7 +8,7 @@
     "lint:fix": "eslint --fix",
     "deps:check": "npm-check-updates --configFileName .ncurc.yml --deep --dep prod,dev,optional",
     "deps:update": "npm-check-updates --configFileName .ncurc.yml -u --deep --dep prod,dev,optional",
-    "dev": "nodemon -e ts --exec \"yarn debug\"",
+    "dev": "nodemon -e ts --exec \"npm run debug\"",
     "debug": "tsc && node --inspect=0.0.0.0 build/server.js",
     "start": "nodemon build/server.js"
   },
