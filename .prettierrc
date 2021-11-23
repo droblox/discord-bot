@@ -1,6 +1,6 @@
 {
   "singleQuote": false,
-  "jsxBracketSameLine": true,
+  "bracketSameLine": true,
   "bracketSpacing": false,
   "printWidth": 100,
   "useTabs": false,
