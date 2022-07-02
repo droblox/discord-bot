@@ -33,8 +33,10 @@ async function start() {
 
   client.on("interaction", async (interaction) => {
     if (!interaction.isCommand()) return;
-    if (interaction.commandName === "ping")
-      await interaction.reply({content: "Pong!", ephemeral: true});
+    if (interaction.commandName === "ping") {
+      //await interaction.reply({content: "Pong!", ephemeral: true});
+      await interaction.reply({content: `Pong`, ephemeral: true});
+    }
   });
 
   client.on("message", async (message) => {
