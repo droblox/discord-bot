@@ -23,7 +23,7 @@ async function start() {
       for (const [id, channel] of channels) {
         if (channel.isText() && channel.name.toLowerCase().includes("announcements")) {
           channel.send(
-            "Hello everyone! I'm the new bot that'll also manage this Discord server. I can help people, make announcements and also ban people (that's probably the most fun thing I can do). Also a thing to keep in mind is that I'm made by @Komerdoor#773."
+            "Hello everyone! I'm back."
           );
         }
       }
